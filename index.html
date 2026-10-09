@@ -243,8 +243,9 @@
 
     /* Like icon - larger and clean */
     .metric.like svg {
-      width: 1.4em;
-      height: 1.4em;
+  width: 1.25em;
+  height: 1.25em;
+  flex-shrink: 0;
     }
 
     .metric:hover { color: #1d9bf0; }
@@ -366,15 +367,15 @@
             <span id="displayReposts">0</span>
           </div>
 
-          <!-- Like (clean single path + larger) -->
-          <div class="metric like">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <g>
-                <path d="M16.697 5.61c-1.242-1.26-3.123-1.26-4.365 0l-.23.234-.23-.234c-1.242-1.26-3.123-1.26-4.365 0-1.37 1.39-1.37 3.64 0 5.03l4.595 4.67 4.595-4.67c1.37-1.39 1.37-3.64 0-5.03zm-6.01 8.14L8.27 11.3c-.74-.75-.74-1.97 0-2.72.72-.73 1.89-.73 2.61 0l.23.23.23-.23c.72-.73 1.89-.73 2.61 0 .74.75.74 1.97 0 2.72l-2.41 2.45z"></path>
-              </g>
-            </svg>
-            <span id="displayLikes">0</span>
-          </div>
+          
+<!-- Like -->
+<div class="metric like">
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M20.884 13.888l-7.01 7.01a1.25 1.25 0 0 1-1.768 0l-7.01-7.01a5.5 5.5 0 0 1 7.778-7.778l.116.116.116-.116a5.5 5.5 0 0 1 7.778 7.778z"/>
+  </svg>
+  <span id="displayLikes">0</span>
+</div>
+
 
           <!-- Views -->
           <div class="metric">
@@ -388,13 +389,26 @@
           </div>
 
           <!-- Share (correct current X icon) -->
-          <div class="metric">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <g>
-                <path d="M12 2.59l5.7 5.7-1.41 1.42L13 6.41V16h-2V6.41l-3.3 3.3-1.41-1.42L12 2.59zM21 15l-.02 3.51c0 1.38-1.12 2.49-2.5 2.49H5.5C4.11 21 3 19.88 3 18.5V15h2v3.5c0 .28.22.5.5.5h12.98c.28 0 .5-.22.5-.5L19 15h2z"></path>
-              </g>
-            </svg>
-          </div>
+          
+<!-- Share: three connected dots -->
+<div class="metric share">
+  <svg viewBox="0 0 24 24"
+       aria-hidden="true">
+    <path d="M8.5 12L15.5 6.5M8.5 12l7 5.5"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"/>
+    <circle cx="6" cy="12" r="3"
+            fill="currentColor"/>
+    <circle cx="18" cy="5" r="3"
+            fill="currentColor"/>
+    <circle cx="18" cy="19" r="3"
+            fill="currentColor"/>
+  </svg>
+</div>
+
         </div>
       </div>
 
